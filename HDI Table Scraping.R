@@ -15,12 +15,12 @@ for(i in 1:2) {
   HDI_Calendar_CourseNames <- HDI_Calendar_Page %>%
     html_nodes(".CourseSchedule-CourseLink") %>%
     html_text() %>%
-    append(HDI_Calendar_CourseNames)
+    append(HDI_Calendar_CourseNames, .)
   
   #get vector of locations
   HDI_Calendar_Locations <- HDI_Calendar_Page %>%
-    html_nodes("br+span") %>%
+    html_nodes(".CourseSchedule-lightbox-location") %>%
     html_text() %>%
-    append(HDI_Calendar_Locations)
+    append(HDI_Calendar_Locations, .)
 
 }
