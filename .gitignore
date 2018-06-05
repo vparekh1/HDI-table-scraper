@@ -2,3 +2,7 @@
 .Rproj.user
 .Rhistory
 .RData
+
+#Excel Files From Output
+.xlsx
+.csv
