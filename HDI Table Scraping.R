@@ -1,5 +1,6 @@
 library('rvest')
 library('magrittr')
+library('xml2')
 
 HDI_Calendar_CourseNames <- character()
 HDI_Calendar_Data <- character()
