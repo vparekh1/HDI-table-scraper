@@ -4,5 +4,5 @@
 .RData
 
 #Excel Files From Output
-.xlsx
-.csv
+*.xlsx
+*.csv
