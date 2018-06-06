@@ -7,7 +7,7 @@ HDI_Calendar_Data <- character()
 
 
 #loop through all possible pages
-for(i in 1:2) {
+for(i in 1:20) {
   
   #Read html page
   HDI_Calendar_Page <- paste("https://www.thinkhdi.com/education/calendar.aspx?pg=", i, sep="") %>%
@@ -49,3 +49,6 @@ HDI_Calendar.df <- data.frame(Course_Name = HDI_Calendar_CourseNames,
                               End_Date = HDI_Calendar_Dates_END, 
                               City = HDI_Calendar_City,
                               State = HDI_Calendar_State)
+
+write.csv2(HDI_Calendar.df, file="HDI Calendar.csv", na = "NA")
+
